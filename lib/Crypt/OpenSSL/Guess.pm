@@ -47,7 +47,7 @@ sub openssl_lib_paths {
     return '' unless -x $exec;
 
     my @lib_paths;
-    for ($prefix, "$prefix/lib64", "$prefix/lib", "$prefix/out32dll") {
+    for ($prefix, "$prefix/lib64", "$prefix/lib/64", "$prefix/lib", "$prefix/out32dll") {
         push @lib_paths, $_ if -d $_;
     }
 
